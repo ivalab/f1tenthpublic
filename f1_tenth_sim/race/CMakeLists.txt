@@ -7,11 +7,16 @@ project(race)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  dynamic_reconfigure
   sensor_msgs
   std_msgs
   message_generation
   geometry_msgs
   tf
+)
+
+generate_dynamic_reconfigure_options(
+  cfg/carControl.cfg
 )
 
 ## System dependencies are found with CMake's conventions
